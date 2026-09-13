@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,24 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts para replicar la tipografía amigable -->
   <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  
+
   <style>
     body {
-      background-color: #fff0f5; /* Fondo rosa pastel */
+      background-color: #fff0f5;
+      /* Fondo rosa pastel */
       font-family: 'Nunito', sans-serif;
       color: #5a1829;
-      scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
-      padding-top: 70px; /* Espacio para que el menú superior fijo no tape el contenido */
+      scroll-behavior: smooth;
+      /* Desplazamiento suave al hacer clic en el menú */
+      padding-top: 70px;
+      /* Espacio para que el menú superior fijo no tape el contenido */
     }
-    
+
     /* Fuentes para títulos estilo marca */
-    h1, h2, h3, .brand-font {
+    h1,
+    h2,
+    h3,
+    .brand-font {
       font-family: 'Chewy', cursive;
     }
 
@@ -27,9 +34,10 @@
     .navbar-custom {
       background-color: rgba(255, 240, 245, 0.95);
       backdrop-filter: blur(5px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
       border-bottom: 2px solid #ffb6c1;
     }
+
     .navbar-custom .nav-link {
       font-weight: 700;
       color: #d81b60 !important;
@@ -37,11 +45,12 @@
       padding: 6px 12px;
       border-radius: 20px;
     }
+
     .navbar-custom .nav-link:hover {
       background-color: #ffe4e1;
       color: #ad1457 !important;
     }
-    
+
     /* Contenedor del Logotipo como Encabezado */
     .logo-header-container {
       width: 100%;
@@ -49,32 +58,36 @@
       margin: 0 auto 30px auto;
       border-radius: 25px;
       overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
       border: 3px solid #ffb6c1;
       background-color: #fff;
     }
+
     .logo-header-img {
       width: 100%;
       height: auto;
       display: block;
     }
-    
+
     /* Tarjetas personalizadas */
-    .card-pink { 
-      background-color: #ffe4e1; 
-      border: 3px solid #ffb6c1; 
+    .card-pink {
+      background-color: #ffe4e1;
+      border: 3px solid #ffb6c1;
       border-radius: 25px;
     }
-    .card-cyan { 
-      background-color: #e0f7fa; 
-      border: 3px solid #80deea; 
+
+    .card-cyan {
+      background-color: #e0f7fa;
+      border: 3px solid #80deea;
       border-radius: 25px;
     }
-    .card-yellow { 
-      background-color: #fff9c4; 
-      border: 3px solid #ffee58; 
+
+    .card-yellow {
+      background-color: #fff9c4;
+      border: 3px solid #ffee58;
       border-radius: 25px;
     }
+
     .card-orange {
       background-color: #ffe0b2;
       border: 3px solid #ffb74d;
@@ -83,7 +96,7 @@
 
     .card h3 {
       text-align: center;
-      background-color: rgba(255,255,255,0.6);
+      background-color: rgba(255, 255, 255, 0.6);
       border-radius: 15px;
       padding: 5px 15px;
       display: inline-block;
@@ -94,8 +107,7 @@
     .menu-image-container {
       width: 100%;
       height: 160px;
-      background-color: rgba(255, 255, 255, 0.6);
-      border: 2px dashed rgba(0, 0, 0, 0.15);
+      border: 2px solid rgba(0, 0, 0, 0.15);
       border-radius: 15px;
       display: flex;
       flex-direction: column;
@@ -105,7 +117,7 @@
       overflow: hidden;
       position: relative;
     }
-    
+
     .menu-img {
       width: 100%;
       height: 100%;
@@ -119,27 +131,49 @@
     }
 
     /* Estilo de los elementos del menú */
-    .menu-item { 
-      display: flex; 
-      justify-content: space-between; 
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
       align-items: flex-end;
-      border-bottom: 2px dotted #ffb6c1; 
+      border-bottom: 2px dotted #ffb6c1;
       margin-bottom: 12px;
       padding-bottom: 4px;
     }
-    .card-cyan .menu-item { border-bottom-color: #80deea; }
-    .card-yellow .menu-item { border-bottom-color: #ffee58; }
-    .card-orange .menu-item { border-bottom-color: #ffb74d; }
-    
-    .menu-item:last-child { border-bottom: none; }
-    
-    .item-name { font-weight: 700; font-size: 1.1rem; }
-    .item-desc { font-size: 0.85rem; color: #666; display: block; line-height: 1.2; margin-top: 2px;}
-    
-    .price { 
-      font-weight: 900; 
+
+    .card-cyan .menu-item {
+      border-bottom-color: #80deea;
+    }
+
+    .card-yellow .menu-item {
+      border-bottom-color: #ffee58;
+    }
+
+    .card-orange .menu-item {
+      border-bottom-color: #ffb74d;
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-name {
+      font-weight: 700;
       font-size: 1.1rem;
     }
+
+    .item-desc {
+      font-size: 0.85rem;
+      color: #666;
+      display: block;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    .price {
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
     .price-box {
       background-color: rgba(255, 255, 255, 0.7);
       padding: 8px 12px;
@@ -148,36 +182,50 @@
     }
 
     /* Colores específicos por sección */
-    .text-pink { color: #d81b60; }
-    .text-cyan { color: #00838f; }
-    .text-yellow { color: #f57f17; }
-    .text-orange { color: #e65100; }
+    .text-pink {
+      color: #d81b60;
+    }
+
+    .text-cyan {
+      color: #00838f;
+    }
+
+    .text-yellow {
+      color: #f57f17;
+    }
+
+    .text-orange {
+      color: #e65100;
+    }
 
     /* Footer WhatsApp */
-    .footer-whatsapp { 
-      background-color: #25d366; 
-      color: white; 
-      border-radius: 50px; 
+    .footer-whatsapp {
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
       padding: 15px 35px;
       display: inline-flex;
       align-items: center;
       gap: 15px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-decoration: none;
     }
+
     .footer-whatsapp:hover {
       background-color: #20ba5a;
       color: white;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Menú Superior de Navegación Fijo -->
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand brand-font text-pink fs-3 m-0" href="#">Postres Alina</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -200,11 +248,11 @@
   </nav>
 
   <div class="container py-4">
-    
+
     <!-- Encabezado con la Imagen del Logotipo -->
     <div class="logo-header-container">
       <!-- Asegúrate de colocar la ruta correcta de tu imagen en el atributo src (ej. src="tu-logo.png") -->
-      <img src="img/Img1.png" alt="Postres Alina - Hechos con mucho amor" class="logo-header-img">
+      <img src="img/img1.png" alt="Postres Alina - Hechos con mucho amor" class="logo-header-img">
     </div>
 
     <div class="row g-4">
@@ -214,19 +262,19 @@
           <div class="text-center">
             <h3 class="text-pink">Vaso de postre</h3>
           </div>
-          
+
           <!-- Espacio para Imagen Ilustrativa: img1 -->
           <div class="menu-image-container">
-            <span class="text-muted fw-bold" style="font-size: 0.9rem;">📷 img1</span>
-            <span class="text-muted" style="font-size: 0.75rem;">Imagen ilustrativa</span>
+            <!-- Asegúrate de colocar la ruta correcta de tu imagen en el atributo src (ej. src="tu-logo.png") -->
+            <img src="img/img2.png" alt="Postres Alina - Hechos con mucho amor" class="logo-header-img">
           </div>
 
           <!-- Lista de Opciones de Postre -->
           <div class="menu-item border-0 mb-2">
-            <span class="item-name text-pink">Vaso de postre</span> 
+            <span class="item-name text-pink">Vaso de postre</span>
           </div>
           <div class="menu-item border-0 mb-2">
-            <span class="item-name text-pink">Uvas con crema</span> 
+            <span class="item-name text-pink">Uvas con crema</span>
           </div>
           <div class="menu-item border-0 mb-2">
             <div>
@@ -253,7 +301,7 @@
             </div>
           </div>
           <div class="menu-item border-0 mb-2">
-            <span class="item-name text-pink">Arroz con leche</span> 
+            <span class="item-name text-pink">Arroz con leche</span>
           </div>
 
           <!-- Subsección: Tamaños y Precios -->
@@ -262,15 +310,15 @@
           </div>
 
           <div class="menu-item mt-2">
-            <span class="item-name text-pink">Vaso de 8 oz</span> 
+            <span class="item-name text-pink">Vaso de 8 oz</span>
             <span class="price text-pink">$35.00</span>
           </div>
           <div class="menu-item">
-            <span class="item-name text-pink">Vaso c/3 divisiones</span> 
+            <span class="item-name text-pink">Vaso c/3 divisiones</span>
             <span class="price text-pink">$50.00</span>
           </div>
           <div class="menu-item">
-            <span class="item-name text-pink">Vaso de medio</span> 
+            <span class="item-name text-pink">Vaso de medio</span>
             <span class="price text-pink">$65.00</span>
           </div>
         </div>
@@ -278,7 +326,7 @@
 
       <!-- Columna Derecha: Waffles, Snacks y Alitas/Costillas -->
       <div class="col-md-6 d-flex flex-column gap-4">
-        
+
         <!-- Sección: Waffles -->
         <div class="card card-cyan p-4 shadow-sm" id="seccion-waffles">
           <div class="text-center">
@@ -287,29 +335,28 @@
 
           <!-- Espacio para Imagen Ilustrativa: img2 -->
           <div class="menu-image-container">
-            <span class="text-muted fw-bold" style="font-size: 0.9rem;">📷 img2</span>
-            <span class="text-muted" style="font-size: 0.75rem;">Imagen ilustrativa</span>
+            <img src="img/img3.jpg" alt="Postres Alina - Hechos con mucho amor" class="logo-header-img">
           </div>
-          
+
           <div class="menu-item mt-2 border-0 mb-3">
             <div>
               <span class="item-name text-cyan">Base de nutella c/fruta</span>
-              <span class="item-desc">(o chips de chocolate blanco)</span>
+              <span class="item-desc">(o chispas de chocolate blanco)</span>
             </div>
           </div>
           <div class="menu-item border-0 mb-3">
             <div>
               <span class="item-name text-cyan">Base de lechera c/fruta</span>
-              <span class="item-desc">(o chips de chocolate blanco)</span>
+              <span class="item-desc">(o chispas de chocolate blanco)</span>
             </div>
           </div>
           <div class="menu-item mb-3 pb-3 border-bottom border-cyan">
             <div>
               <span class="item-name text-cyan">Base de hershey’s c/fruta</span>
-              <span class="item-desc">(o chips de chocolate blanco)</span>
+              <span class="item-desc">(o chispas de chocolate blanco)</span>
             </div>
           </div>
-          
+
           <div class="menu-item mt-3">
             <div>
               <span class="item-name text-cyan">Orden de minis</span>
@@ -325,7 +372,7 @@
             <span class="price text-cyan">$20.00</span>
           </div>
           <div class="menu-item">
-            <span class="item-name text-cyan">Topping extra</span> 
+            <span class="item-name text-cyan">Topping extra</span>
             <span class="price text-cyan">$10.00</span>
           </div>
         </div>
@@ -338,10 +385,8 @@
 
           <!-- Espacio para Imagen Ilustrativa: img3 -->
           <div class="menu-image-container">
-            <span class="text-muted fw-bold" style="font-size: 0.9rem;">📷 img3</span>
-            <span class="text-muted" style="font-size: 0.75rem;">Imagen ilustrativa</span>
+            <img src="img/img4.jpg" alt="Postres Alina - Hechos con mucho amor" class="logo-header-img">
           </div>
-          
           <div class="menu-item mt-2">
             <div>
               <span class="item-name text-yellow">Hamburguesa sencilla</span>
@@ -394,19 +439,19 @@
 
           <!-- Espacio para Imagen Ilustrativa: img4 -->
           <div class="menu-image-container">
-            <span class="text-muted fw-bold" style="font-size: 0.9rem;">📷 img4</span>
-            <span class="text-muted" style="font-size: 0.75rem;">Imagen ilustrativa</span>
+            <img src="img/img5.jpg" alt="Postres Alina - Hechos con mucho amor" class="logo-header-img">
           </div>
 
           <div class="text-center mb-3">
             <p class="item-desc mb-2"><strong>Incluyen papas.</strong> Elige tu salsa:</p>
-            <div class="bg-white p-2 rounded-3 border border-warning shadow-sm mx-auto" style="font-size: 0.85rem; line-height: 1.4;">
+            <div class="bg-white p-2 rounded-3 border border-warning shadow-sm mx-auto"
+              style="font-size: 0.85rem; line-height: 1.4;">
               <span class="d-block text-orange fw-bold">BBQ Tradicional</span>
               <span class="d-block text-orange fw-bold">Mango Habanero</span>
               <span class="d-block text-orange fw-bold">Tamarindo Habanero</span>
             </div>
           </div>
-          
+
           <!-- Alitas -->
           <div class="menu-item border-0 mb-1">
             <span class="item-name text-orange">Orden de Alitas</span>
@@ -439,7 +484,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -448,16 +493,19 @@
       <a href="https://wa.me/525576060616" target="_blank" class="footer-whatsapp brand-font fs-3">
         <!-- Logo oficial completo de WhatsApp en SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.36 2.753 1.051 3.951L.1 15.5l3.725-.975a7.86 7.86 0 0 0 3.93 1.054h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.228h-.003a5.86 5.86 0 0 1-2.986-.814l-.214-.127-2.217.581.59-2.164-.139-.221a5.85 5.85 0 0 1-.894-3.097c.004-3.228 2.625-5.85 5.853-5.85a5.86 5.86 0 0 1 4.148 1.715 5.86 5.86 0 0 1 1.716 4.149c-.005 3.23-2.627 5.85-5.854 5.85z"/>
-          <path d="M12.04 11.005c-.31-.155-1.834-.906-2.119-1.01-.285-.104-.493-.155-.702.155-.208.31-.805 1.01-.987 1.218-.182.208-.364.233-.674.078-.31-.155-1.308-.482-2.492-1.536-.921-.82-1.542-1.832-1.724-2.142-.182-.31-.02-.478.136-.633.14-.14.31-.364.467-.546.156-.182.208-.31.312-.519.104-.208.052-.39-.026-.546-.078-.155-.702-1.69-.962-2.314-.253-.605-.512-.523-.702-.532L3.65 3.12c-.208 0-.546.078-.832.39-.286.312-1.092 1.066-1.092 2.6 0 1.534 1.118 3.016 1.274 3.225.156.208 2.2 3.366 5.332 4.72.745.322 1.325.514 1.777.658.747.237 1.427.203 1.967.123.6-.089 1.834-.75 2.094-1.476.26-.726.26-1.348.182-1.476-.078-.127-.286-.208-.596-.364z"/>
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.36 2.753 1.051 3.951L.1 15.5l3.725-.975a7.86 7.86 0 0 0 3.93 1.054h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.228h-.003a5.86 5.86 0 0 1-2.986-.814l-.214-.127-2.217.581.59-2.164-.139-.221a5.85 5.85 0 0 1-.894-3.097c.004-3.228 2.625-5.85 5.853-5.85a5.86 5.86 0 0 1 4.148 1.715 5.86 5.86 0 0 1 1.716 4.149c-.005 3.23-2.627 5.85-5.854 5.85z" />
+          <path
+            d="M12.04 11.005c-.31-.155-1.834-.906-2.119-1.01-.285-.104-.493-.155-.702.155-.208.31-.805 1.01-.987 1.218-.182.208-.364.233-.674.078-.31-.155-1.308-.482-2.492-1.536-.921-.82-1.542-1.832-1.724-2.142-.182-.31-.02-.478.136-.633.14-.14.31-.364.467-.546.156-.182.208-.31.312-.519.104-.208.052-.39-.026-.546-.078-.155-.702-1.69-.962-2.314-.253-.605-.512-.523-.702-.532L3.65 3.12c-.208 0-.546.078-.832.39-.286.312-1.092 1.066-1.092 2.6 0 1.534 1.118 3.016 1.274 3.225.156.208 2.2 3.366 5.332 4.72.745.322 1.325.514 1.777.658.747.237 1.427.203 1.967.123.6-.089 1.834-.75 2.094-1.476.26-.726.26-1.348.182-1.476-.078-.127-.286-.208-.596-.364z" />
         </svg>
         Pedidos por WhatsApp 5576060616
       </a>
     </div>
-    
+
   </div>
 
   <!-- Bootstrap JS para que funcione el menú colapsable en celulares -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
